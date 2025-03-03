@@ -3,7 +3,7 @@ Download census sheets images from Slovakiana.sk.
 
 # Požiadavky:
 
-Textový súbor Slovakiana.txt obsahujúci adresu api.scitacieharky.sk, v rovnakom priečinku ako vygenerovaný java class.
+Textový súbor Slovakiana.txt obsahujúci adresu api.scitacieharky.sk/..., v rovnakom priečinku ako vygenerovaný java class.
 
 # Použitie:
 
