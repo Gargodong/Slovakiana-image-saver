@@ -555,11 +555,11 @@ class Slovakiana
             fosLog.write(comma.getBytes());
             fosLog.write(output[1].getBytes());
             fosLog.write(comma.getBytes());
+	    fosLog.write(output[6].getBytes());
+            fosLog.write(comma.getBytes());
             fosLog.write(output[2].getBytes());
             fosLog.write(comma.getBytes());
             fosLog.write(output[5].getBytes());
-            fosLog.write(comma.getBytes());
-            fosLog.write(output[6].getBytes());
             fosLog.write(comma.getBytes());
             fosLog.write(output[3].getBytes());
             fosLog.write(comma.getBytes());
