@@ -77,7 +77,7 @@ class Slovakiana
 
 			if (character > 47 && character < 58)
 			{
-				parameter = args[0];
+				parameter = args[1];
 			}
 			else
 			{
