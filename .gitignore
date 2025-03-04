@@ -3,3 +3,6 @@
 
 # Log file
 *.csv
+
+# JPEG2000 file
+*.jp2
