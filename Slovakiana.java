@@ -31,16 +31,68 @@ class Slovakiana
     
     private static boolean generateBoth = true;
     
-    private static int placeid = 0;
+    private static int placeid = -1;
     
     public static void main(String[] args) 
     {
         System.out.println("Starting...");
+
+	int length = args.length;
+
+	int character = -1;
+
+	String parameter;
+
+	switch (length)
+	{
+		case 1:
+		{
+			character = args[0].charAt(0);
+
+			if (character > 47 && character < 58)
+			{
+				parameter = args[0];
+			}
+			else
+			{
+				generateBoth = false;
+			}
+		}
+		break;
+
+		case 2:
+		{
+			character = args[0].charAt(0);
+
+			if (character > 47 && character < 58)
+			{
+				parameter = args[0];
+			}
+			else
+			{
+				generateBoth = false;
+			}
+
+			character = args[1].charAt(0);
+
+			if (character > 47 && character < 58)
+			{
+				placeid = args[0];
+			}
+			else
+			{
+				generateBoth = false;
+			}
+		}
+		break;
+
+		default:
+		case 0:
+		break;
+	}
         
-        if (args.length != 0)
+        if (parameter != null)
         {
-            String parameter = args[0];
-            
             try 
             {
                 placeid = Integer.parseInt(parameter);
@@ -49,13 +101,8 @@ class Slovakiana
             {
                 System.out.println("Error parsing parameter.");
             
-                placeid = 0;
+                placeid = -1;
             }
-        }
-        
-        if (placeid > 0)
-        {
-            generateBoth = false;
         }
         
         int position = -1;
@@ -403,7 +450,7 @@ class Slovakiana
 	        {
 	            int ix = i + 1;
 	        
-	            streamName = object + "_" + ix + jp2;
+	            streamName = object + "_" + "p" + ix + jp2;
 	        }
 	        else
 	        {
@@ -413,8 +460,8 @@ class Slovakiana
 	        try
 	        {
 	            FileOutputStream fos = new FileOutputStream(streamName);
-                fos.write(bytes);
-                fos.close();
+                    fos.write(bytes);
+                    fos.close();
 	        }
 	        catch (IOException exception)
 	        {
@@ -495,7 +542,7 @@ class Slovakiana
     {
         String newline = "\r\n";
         
-        if (!generateBoth)
+        if (placeid != -1)
         {
             object = "110" + placeid + object;
         }
