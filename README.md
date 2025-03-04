@@ -11,6 +11,7 @@ Textový súbor Slovakiana.txt obsahujúci adresu api.scitacieharky.sk/..., v ro
 javac Slovakiana.java
 java Slovakiana
 ```
+Výstupne obrázky sú vo formate jp2, takisto je vygenerovaný log output.csv.
 
 # Poďakovanie:
 
