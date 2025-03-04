@@ -41,7 +41,7 @@ class Slovakiana
 
 	int character = -1;
 
-	String parameter;
+	String parameter = null;
 
 	switch (length)
 	{
